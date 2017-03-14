@@ -771,6 +771,30 @@ JNIEXPORT jboolean JNICALL Java_com_eclipsesource_v8_V8__1pumpMessageLoop
 JNIEXPORT jboolean JNICALL Java_com_eclipsesource_v8_V8__1isRunning
   (JNIEnv *, jclass, jlong);
 
+/*
+ * Class:     com_eclipsesource_v8_V8
+ * Method:    _startProfiling
+ * Signature: (JLjava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_com_eclipsesource_v8_V8__1startProfiling
+  (JNIEnv *, jobject, jlong, jstring);
+
+/*
+ * Class:     com_eclipsesource_v8_V8
+ * Method:    _stopProfiling
+ * Signature: (JLjava/lang/String;Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_com_eclipsesource_v8_V8__1stopProfiling
+  (JNIEnv *, jobject, jlong, jstring, jstring);
+
+/*
+ * Class:     com_eclipsesource_v8_V8
+ * Method:    _takeHeapSnapshot
+ * Signature: (JLjava/lang/String;Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_com_eclipsesource_v8_V8__1takeHeapSnapshot
+  (JNIEnv *, jobject, jlong, jstring, jstring);
+
 #ifdef __cplusplus
 }
 #endif
